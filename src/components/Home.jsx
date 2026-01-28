@@ -2,11 +2,11 @@ import heroImg from "../assets/hero.jpg";
 
 const Hero = () => {
   return (
-    <section className="bg-gray-100 py-16">
+    <section className="bg-white py-16">
       <div className="max-w-5xl mx-auto px-6">
         {/* Card */}
         <div
-          className="relative rounded-2xl overflow-hidden shadow-lg min-h-[420px] flex items-center justify-center text-center"
+          className="relative rounded-2xl overflow-hidden shadow-lg min-h-105 flex items-center justify-center text-center"
           style={{
             backgroundImage: `url(${heroImg})`,
             backgroundSize: "cover",
