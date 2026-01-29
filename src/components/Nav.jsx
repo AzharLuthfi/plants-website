@@ -1,12 +1,25 @@
-import Container from "./Container";
-
+import { useEffect, useState } from "react";
+import { PiFlowerLotusFill } from "react-icons/pi";
 const Nav = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
+    <header
+      className={`border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white/80 backdrop-blur-md" : "bg-white"
+      }`}
+    >
       <div className="flex items-center justify-between h-16 px-15">
         {/* Logo */}
         <div className="flex items-center gap-2 font-bold text-lg">
-          <span className="text-xl">🌿</span>
+          <PiFlowerLotusFill size={24} className="text-gray-900" />
           <a href="#home" className="text-gray-900 font-bold text-lg">
             PLANTS
           </a>
