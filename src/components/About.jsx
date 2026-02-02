@@ -3,7 +3,7 @@ import { BiLeaf } from "react-icons/bi";
 import aboutImg from "../assets/about.jpg";
 const About = () => {
   return (
-    <section className="bg-gray-100 py-16">
+    <section id="about" className="bg-gray-100 py-16">
       <div className="flex flex-row items-center gap-4 max-w-5xl mx-auto px-6">
         <div className="flex-1">
           <h1 className="text-base font-bold text-teal-900 opacity-50 mb-4">

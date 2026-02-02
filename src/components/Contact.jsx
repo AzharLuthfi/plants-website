@@ -3,7 +3,7 @@ import { FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <section className="bg-[#f6f8ef] py-24">
+    <section id="contact" className="bg-[#f6f8ef] py-24">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           {/* LEFT CONTENT */}

@@ -2,7 +2,7 @@ import { HiShieldCheck } from "react-icons/hi";
 
 const Benefits = () => {
   return (
-    <section className="bg-[#f6f8ef] py-20">
+    <section id="benefits" className="bg-[#f6f8ef] py-20">
       <div className="max-w-6xl mx-auto px-6">
         <h1 className="text-center font-bold text-2xl mb-12">
           Why Choose Our Plants?

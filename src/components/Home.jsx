@@ -2,7 +2,7 @@ import heroImg from "../assets/hero.jpg";
 
 const Hero = () => {
   return (
-    <section className="bg-white py-16">
+    <section id="home" className="bg-white py-16">
       <div className="max-w-5xl mx-auto px-6">
         {/* Card */}
         <div

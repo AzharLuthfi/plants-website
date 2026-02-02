@@ -15,6 +15,13 @@ const Nav = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const menuItems = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Plants", href: "#plants" },
+    { label: "Benefits", href: "#benefits" },
+    { label: "Contact", href: "#contact" },
+  ];
   return (
     <header
       className={`sticky top-0 z-50 border-b border-gray-200 transition-all duration-300 ${
@@ -32,18 +39,18 @@ const Nav = () => {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-8 text-sm text-gray-600 items-center">
-          {["Home", "About", "Plants", "Benefits", "Contact"].map((item) => (
+          {menuItems.map((item) => (
             <a
-              key={item}
-              href="#"
+              key={item.label}
+              href={item.href}
               className="text-gray-900 font-semibold hover:text-green-600 transition-colors"
             >
-              {item}
+              {item.label}
             </a>
           ))}
 
           <a
-            href="#"
+            href="#plants"
             className="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-sm transition-colors"
           >
             Shop Now
@@ -62,19 +69,19 @@ const Nav = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-4">
-          {["Home", "About", "Plants", "Benefits", "Contact"].map((item) => (
+          {menuItems.map((item) => (
             <a
-              key={item}
-              href="#"
+              key={item.label}
+              href={item.href}
               onClick={() => setIsOpen(false)}
               className="block text-gray-900 font-semibold hover:text-green-600 transition-colors"
             >
-              {item}
+              {item.label}
             </a>
           ))}
 
           <a
-            href="#"
+            href="#plants"
             onClick={() => setIsOpen(false)}
             className="block text-center bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-sm transition-colors"
           >

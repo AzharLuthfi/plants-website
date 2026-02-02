@@ -43,7 +43,7 @@ const PlantsCatalog = () => {
       : plants.filter((plant) => plant.category === activeFilter);
 
   return (
-    <section className="max-w-5xl mx-auto px-6 py-16">
+    <section id="plants" className="max-w-5xl mx-auto px-6 py-16">
       <div className="mb-10">
         <h2 className="text-3xl font-semibold text-gray-900">
           Elegant Collections
